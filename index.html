@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HANGOUT: Youth Mobility & Urban Innovation. Putting 14–18 year-olds at the centre of sustainable mobility planning across European cities.">
+    <title>HANGOUT - Youth Mobility & Urban Innovation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Glassmorphism Navigation -->
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="assets/log3.png" alt="Hangout Logo" style="height: 100px; max-width: 350px; width: auto; object-fit: contain;">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#objectives">Objectives</a></li>
+                <li><a href="#cities">Cities</a></li>
+                <li><a href="#workpackages">Work Plan</a></li>
+                <li><a href="#consortium">Consortium</a></li>
+                <li><a href="#contact" class="btn-primary small" style="color: white;">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+
+        <div class="container hero-content">
+            <div class="hero-text-area" data-depth="0.1">
+
+                <h1 class="headline">Urban access for every <span class="text-gradient">adolescent.</span></h1>
+                <p class="description">
+                    HANGOUT puts 14–18 year-olds at the centre of sustainable mobility planning — mapping their needs, breaking down barriers, and co-creating tools with them across four European cities.
+                </p>
+                <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                    <a href="#about" class="btn-primary large">Explore Project <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#consortium" style="font-weight: 600; color: var(--color-navy); display: flex; align-items: center; gap: 0.5rem;">
+                        Meet the team
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div>
+                        <div class="stat-val">4</div>
+                        <div class="stat-lbl">European cities</div>
+                    </div>
+                    <div>
+                        <div class="stat-val">36<sup>mo</sup></div>
+                        <div class="stat-lbl">Project duration</div>
+                    </div>
+                    <div>
+                        <div class="stat-val">8</div>
+                        <div class="stat-lbl">Partner institutions</div>
+                    </div>
+                    <div>
+                        <div class="stat-val">14–18</div>
+                        <div class="stat-lbl">Age group</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual-area">
+                <div class="composition-container">
+                    <div class="floating-element el-1 floating-slow" data-depth="0.3">
+                        <div class="glass-icon orange-glow"><i class="fa-solid fa-bicycle"></i></div>
+                    </div>
+                    <div class="floating-element el-2 floating-fast" data-depth="0.2">
+                        <div class="glass-icon teal-glow"><i class="fa-solid fa-bus"></i></div>
+                    </div>
+                    <div class="floating-element el-3 floating-medium" data-depth="0.4">
+                        <div class="glass-icon navy-glow"><i class="fa-solid fa-city"></i></div>
+                    </div>
+                    
+                    <div class="main-video-card">
+                        <img src="assets/youth_mobility.png" alt="Empowering Youth Mobility" class="hero-image">
+                        <div class="glass-tag">Empowering Youth</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span class="ticker-item"><span class="ticker-dot"></span>Active mobility</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>15-minute city</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Youth participation</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Urban living labs</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Transport justice</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Spatial analysis</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Co-design</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Open-source tools</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Intersectionality</span>
+            <!-- duplicate for smooth loop -->
+            <span class="ticker-item"><span class="ticker-dot"></span>Active mobility</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>15-minute city</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Youth participation</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Urban living labs</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Transport justice</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Spatial analysis</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Co-design</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Open-source tools</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Intersectionality</span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle text-gradient">About HANGOUT</div>
+                <h2>Adolescents are the <span style="font-style: italic; color: var(--color-orange);">missing piece</span><br>in the 15-minute city.</h2>
+            </div>
+            <div class="grid-2">
+                <div class="about-text">
+                    <p>The 15-minute city concept promotes proximity, accessibility and decarbonisation — but it largely overlooks the specific mobility needs and aspirations of adolescents aged 14–18 transitioning into adulthood.</p>
+                    <p>HANGOUT addresses this gap head-on. Through comparative research across four European cities, <strong style="color:var(--color-navy)">Urban Living Labs</strong> in Lisbon and Holbæk, and open-source digital tools, the project puts young people at the centre of planning processes.</p>
+                    <p><strong style="color:var(--color-navy)">Our core research question:</strong> How can adolescent-inclusive urban mobility systems support sustainable transitions and strengthen young people's engagement in shaping their cities?</p>
+                    
+                </div>
+                
+                <div class="about-phases">
+                    <div class="phase-card">
+                        <div class="phase-header">
+                            <div class="phase-num s1">S1</div>
+                            <h4>Stage 1 — Diagnostic & Strategy</h4>
+                        </div>
+                        <p>Background research, adolescent mobility data collection, governance mapping and benchmarking of policies and urban systems across four cities.</p>
+                        <span class="phase-months">M1 – M16</span>
+                    </div>
+                    <div class="phase-card">
+                        <div class="phase-header">
+                            <div class="phase-num s2">S2</div>
+                            <h4>Stage 2 — Co-Creation & Tools</h4>
+                        </div>
+                        <p>Urban Living Labs in Lisbon and Holbæk, participatory workshops with adolescents, and development of the HANGOUT Atlas and Policy Toolkit.</p>
+                        <span class="phase-months">M13 – M34</span>
+                    </div>
+                    <div class="phase-card">
+                        <div class="phase-header">
+                            <div class="phase-num s3"><i class="fa-solid fa-arrow-right"></i></div>
+                            <h4>Throughout — Dissemination</h4>
+                        </div>
+                        <p>Engagement with the DUT Knowledge Hub, policy briefs, peer-reviewed publications, and open data to support cities across Europe and beyond.</p>
+                        <span class="phase-months">M1 – M36</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section class="features" id="objectives">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle text-gradient">Specific Objectives</div>
+                <h2>Four goals. <span style="font-style: italic; color: var(--color-orange);">One mission.</span></h2>
+            </div>
+            <div class="cards-grid">
+                <div class="glass-feature-card" data-tilt>
+                    <div class="obj-so">SO1</div>
+                    <div class="card-icon-wrapper orange"><i class="fa-solid fa-magnifying-glass-location"></i></div>
+                    <h3>Understand mobility patterns & needs</h3>
+                    <p>Collect and analyse data on adolescents' lived accessibility experiences across four European cities, beyond school commutes.</p>
+                </div>
+                <div class="glass-feature-card" data-tilt>
+                    <div class="obj-so">SO2</div>
+                    <div class="card-icon-wrapper teal"><i class="fa-solid fa-unlock-keyhole"></i></div>
+                    <h3>Unlock barriers to sustainable choices</h3>
+                    <p>Identify and address structural, institutional, and spatial barriers limiting adolescents' access to sustainable mobility options.</p>
+                </div>
+                <div class="glass-feature-card" data-tilt>
+                    <div class="obj-so">SO3</div>
+                    <div class="card-icon-wrapper navy"><i class="fa-solid fa-handshake-angle"></i></div>
+                    <h3>Co-design through Urban Living Labs</h3>
+                    <p>Actively engage adolescents through ULLs in Lisbon and Holbæk, with Adolescent Councils driving co-creation of solutions.</p>
+                </div>
+                <div class="glass-feature-card" data-tilt>
+                    <div class="obj-so">SO4</div>
+                    <div class="card-icon-wrapper purple"><i class="fa-solid fa-hammer"></i></div>
+                    <h3>Build replicable, scalable tools</h3>
+                    <p>Deliver the open-source HANGOUT Atlas and Policy Toolkit for adolescent-inclusive urban planning, tested across multiple cities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cities Section -->
+    <section class="cities" id="cities">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle text-gradient">Study Sites</div>
+                <h2>Four cities, <span style="font-style: italic; color: var(--color-teal);">one framework.</span></h2>
+            </div>
+            <div class="grid-2">
+                <div class="cities-map-area">
+                    <div class="map-placeholder">
+                        <div id="hangout-map"></div>
+                    </div>
+                </div>
+                <div class="cities-list">
+                    <div class="city-row-card">
+                        <span class="city-flag-big">🇵🇹</span>
+                        <div class="city-info">
+                            <h4>Lisbon</h4>
+                            <span>Large Southern European metropolis · compact, diverse, active mobility...</span>
+                        </div>
+                        <span class="city-badge-sm pilot">Pilot</span>
+                    </div>
+                    <div class="city-row-card">
+                        <span class="city-flag-big">🇩🇰</span>
+                        <div class="city-info">
+                            <h4>Holbæk</h4>
+                            <span>Small Nordic city · strong cycling culture · CO₂ reduction commitments</span>
+                        </div>
+                        <span class="city-badge-sm pilot">Pilot</span>
+                    </div>
+                    <div class="city-row-card">
+                        <span class="city-flag-big">🇪🇸</span>
+                        <div class="city-info">
+                            <h4>Cornellà de Llobregat</h4>
+                            <span>Dense Barcelona suburb · Southern European comparative context</span>
+                        </div>
+                        <span class="city-badge-sm observer">Observer</span>
+                    </div>
+                    <div class="city-row-card">
+                        <span class="city-flag-big">🇳🇴</span>
+                        <div class="city-info">
+                            <h4>Asker</h4>
+                            <span>Norwegian peri-urban municipality · rural-urban mobility dynamics</span>
+                        </div>
+                        <span class="city-badge-sm observer">Observer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Packages -->
+    <section class="workpackages" id="workpackages">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle text-gradient">Work Plan</div>
+                <h2>Seven work packages. <span style="font-style: italic; color: var(--color-navy);">36 months.</span></h2>
+            </div>
+            <div class="wp-grid">
+                <div class="wp-card">
+                    <div class="wp-num" style="background:#007940">WP1</div>
+                    <div class="wp-body">
+                        <h4>Background Research & Framework</h4>
+                        <p>Systematic review, scenario-building, stakeholder workshop, ethical protocol and KPIs.</p>
+                    </div>
+                    <div class="wp-meta">TU Delft<br>M1–6</div>
+                </div>
+                <div class="wp-card">
+                    <div class="wp-num" style="background:#00a0e2">WP2</div>
+                    <div class="wp-body">
+                        <h4>Evaluating Mobility & 15-Min City</h4>
+                        <p>Primary data collection, travel behaviour modelling and equity impact assessment cross-cities.</p>
+                    </div>
+                    <div class="wp-meta">OsloMet<br>M7–16</div>
+                </div>
+                <div class="wp-card">
+                    <div class="wp-num" style="background:#e84e10">WP3</div>
+                    <div class="wp-body">
+                        <h4>Evaluating Policies & Systems</h4>
+                        <p>Governance mapping, Sociotechnical Systems Analysis, stakeholder interviews.</p>
+                    </div>
+                    <div class="wp-meta">UAB<br>M7–16</div>
+                </div>
+                <div class="wp-card">
+                    <div class="wp-num" style="background:#9333ea">WP4</div>
+                    <div class="wp-body">
+                        <h4>Urban Living Labs (ULLs)</h4>
+                        <p>Adolescent Councils and Core Teams in Lisbon and Holbæk; co-design workshops.</p>
+                    </div>
+                    <div class="wp-meta">DTU<br>M13–34</div>
+                </div>
+                <div class="wp-card">
+                    <div class="wp-num" style="background:#003da6">WP5</div>
+                    <div class="wp-body">
+                        <h4>HANGOUT Atlas & Policy Toolkit</h4>
+                        <p>Open-source interactive GIS platform for participatory mapping and accessibility analysis.</p>
+                    </div>
+                    <div class="wp-meta">IST-ID<br>M18–34</div>
+                </div>
+                <div class="wp-card">
+                    <div class="wp-num" style="background:#57534E">WP6</div>
+                    <div class="wp-body">
+                        <h4>Project Management</h4>
+                        <p>Coordination, MEL framework, Data & IPR Plan, and Communication strategy.</p>
+                    </div>
+                    <div class="wp-meta">IST-ID<br>M1–36</div>
+                </div>
+                <div class="wp-card full">
+                    <div class="wp-num" style="background:#1C1917">WP7</div>
+                    <div class="wp-body">
+                        <h4>HANGOUT & the DUT Knowledge Hub</h4>
+                        <p>Active engagement with DUT's 15-Minute City Knowledge Hub — co-authored outputs, policy briefs, and science-to-policy translation. Led by IST-ID (Filipe Moura, DUT Ambassador).</p>
+                    </div>
+                    <div class="wp-meta">IST-ID<br>M1–36</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consortium -->
+    <section class="consortium" id="consortium">
+        <div class="container">
+            <div class="section-header">
+                <div class="subtitle text-gradient">Consortium</div>
+                <h2>Eight institutions. <span style="font-style: italic; color: var(--color-orange);">Five countries.</span></h2>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo-wrap"><img src="https://www.google.com/s2/favicons?sz=128&domain_url=tecnico.ulisboa.pt" alt="IST-ID"></div>
+                    <h4>Instituto Superior Técnico</h4><span class="partner-country">🇵🇹 Portugal</span><span class="partner-role-tag role-coord">Coordinator</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrap"><img src="assets/dtu.png" alt="DTU"></div>
+                    <h4>Danmarks Tekniske Universitet</h4><span class="partner-country">🇩🇰 Denmark</span><span class="partner-role-tag role-partner">Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrap"><img src="https://www.google.com/s2/favicons?sz=128&domain_url=tudelft.nl" alt="TU Delft"></div>
+                    <h4>Delft University of Technology</h4><span class="partner-country">🇳🇱 Netherlands</span><span class="partner-role-tag role-partner">Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrap"><img src="https://www.google.com/s2/favicons?sz=128&domain_url=uab.cat" alt="UAB"></div>
+                    <h4>Universitat Autònoma de Barcelona</h4><span class="partner-country">🇪🇸 Spain</span><span class="partner-role-tag role-partner">Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrap"><img src="https://www.google.com/s2/favicons?sz=128&domain_url=oslomet.no" alt="OsloMet"></div>
+                    <h4>Oslo Metropolitan University</h4><span class="partner-country">🇳🇴 Norway</span><span class="partner-role-tag role-partner">Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrap"><img src="assets/cml.png" alt="CML"></div>
+                    <h4>Câmara Municipal de Lisboa</h4><span class="partner-country">🇵🇹 Portugal</span><span class="partner-role-tag role-city">Municipality</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrap"><img src="https://www.google.com/s2/favicons?sz=128&domain_url=holbaek.dk" alt="Holbæk Kommune"></div>
+                    <h4>Holbæk Kommune</h4><span class="partner-country">🇩🇰 Denmark</span><span class="partner-role-tag role-city">Municipality</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrap"><img src="assets/usp.jpg" alt="USP"></div>
+                    <h4>Universidade de São Paulo</h4><span class="partner-country">🇧🇷 Brazil</span><span class="partner-role-tag role-coop">Cooperation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <!-- Floating Decorations -->
+        <div class="cta-floating-elements">
+            <div class="floating-element cta-el-1 floating-slow">
+                <div class="glass-icon-mini pink-glow"><i class="fa-solid fa-bicycle"></i></div>
+            </div>
+            <div class="floating-element cta-el-2 floating-fast">
+                <div class="glass-icon-mini teal-glow"><i class="fa-solid fa-bus"></i></div>
+            </div>
+            <div class="floating-element cta-el-3 floating-medium">
+                <div class="glass-icon-mini purple-glow"><i class="fa-solid fa-person-walking"></i></div>
+            </div>
+            <div class="floating-element cta-el-4 floating-slow">
+                <div class="glass-icon-mini yellow-glow"><i class="fa-solid fa-city"></i></div>
+            </div>
+        </div>
+
+        <div class="container cta-content">
+            <div class="section-header">
+                <div class="subtitle" style="color: var(--color-orange)">Get Involved</div>
+                <h2>Follow HANGOUT's journey<br>across European cities.</h2>
+            </div>
+            <p>The project runs from January 2026 to December 2028. Follow our progress and get in touch with the team.</p>
+            <div class="cta-buttons">
+                <a href="mailto:hayleyknight@tecnico.ulisboa.pt,jessica.lucena@tecnico.ulisboa.pt,Andrea.Tamara@tecnico.ulisboa.pt,fmoura@tecnico.ulisboa.pt" class="btn-light">Contact the team</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="brand">
+                        <img src="assets/log3.png" alt="Hangout Logo" style="height: 100px; width: auto; object-fit: contain;">
+                    </div>
+                    <p class="footer-note">Unlocking adolescents' urban accessibility and sustainable mobility. DUT Partnership Call 2024, 15-Minute City Pathway. January 2026 – December 2028.</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#objectives">Objectives</a></li>
+                    <li><a href="#cities">Cities</a></li>
+                    <li><a href="#consortium">Team</a></li>
+                </ul>
+                <div class="dut-box">
+                    <small>DUT Partnership</small>
+                    <span>Driving Urban Transitions<br>Co-funded by the European Commission<br>under Horizon Europe</span>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 HANGOUT: Youth Mobility & Urban Innovation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
