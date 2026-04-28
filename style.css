@@ -630,14 +630,18 @@ ul {
     transition: var(--transition-smooth); box-shadow: var(--glass-shadow);
     overflow-y: auto;
 }
-.partner-card:hover .partner-card-front, .partner-card:hover .partner-card-back { 
+.partner-card:hover .partner-card-front { 
     background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 15px 35px rgba(11, 19, 43, 0.1);
+}
+.partner-card:hover .partner-card-back { 
     box-shadow: 0 15px 35px rgba(11, 19, 43, 0.1);
 }
 .partner-card-back {
     transform: rotateY(180deg);
     padding: 1.5rem;
     gap: 0;
+    background: #FFFFFF;
 }
 .partner-card-front::-webkit-scrollbar, .partner-card-back::-webkit-scrollbar {
     width: 4px;
@@ -654,6 +658,15 @@ ul {
     font-size: 1.1rem;
     border-bottom: 1px solid rgba(11, 19, 43, 0.1);
     padding-bottom: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.partner-card-back h4:hover {
+    color: var(--color-teal);
 }
 .team-list {
     display: flex;
@@ -661,14 +674,21 @@ ul {
     gap: 0.8rem;
     width: 100%;
     font-size: 0.9rem;
-    text-align: left;
+    text-align: center;
+    align-items: center;
+}
+.team-list > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .team-list a {
     color: var(--color-navy);
     font-weight: 600;
     transition: color 0.3s;
     text-decoration: none;
-    display: flex;
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
     gap: 0.5rem;
 }
