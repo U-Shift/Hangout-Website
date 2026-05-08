@@ -33,6 +33,9 @@
                 <li><a href="news.html" target="_blank" style="color: var(--color-orange); font-weight: 700;">News</a>
                 </li>
                 <li><a href="#contact" class="btn-primary small" style="color: white;">Get Started</a></li>
+                <li style="display: flex; align-items: center; margin-left: 10px;">
+                    <div id="google_translate_element"></div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -620,6 +623,16 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <script src="script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'da,nl,es,no,pt',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

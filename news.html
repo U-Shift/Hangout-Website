@@ -32,6 +32,9 @@
                 <li><a href="index.html#workpackages">Work Plan</a></li>
                 <li><a href="index.html#consortium">Consortium</a></li>
                 <li><a href="news.html" style="color: var(--color-orange); font-weight: 700;">News</a></li>
+                <li style="display: flex; align-items: center; margin-left: 10px;">
+                    <div id="google_translate_element"></div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -140,6 +143,16 @@
         </div>
     </footer>
 
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'da,nl,es,no,pt',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
