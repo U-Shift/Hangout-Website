@@ -33,19 +33,14 @@
                 <li><a href="news.html" target="_blank" style="color: var(--color-orange); font-weight: 700;">News</a>
                 </li>
                 <li><a href="#contact" class="btn-primary small" style="color: white;">Get Started</a></li>
-                <li style="position: relative; margin-left: 10px;">
-                    <div id="google_translate_element" style="display:none;"></div>
-                    <div class="lang-btn" onclick="toggleLangMenu()" style="cursor: pointer; display: flex; align-items: center; gap: 5px; font-size: 1.2rem; background: rgba(255,255,255,0.5); padding: 5px 12px; border-radius: 50px; border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); transition: all 0.3s ease;">
-                        <span id="current-lang-flag">🇬🇧</span> <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: var(--color-navy);"></i>
-                    </div>
-                    <ul id="lang-menu" style="display: none; position: absolute; top: 120%; right: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 10px; list-style: none; min-width: 140px; z-index: 1000; flex-direction: column; gap: 5px; border: 1px solid var(--glass-border);">
-                        <li><a href="#" onclick="doGTranslate('en'); return false;" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-navy); padding: 8px 10px; border-radius: 10px; font-weight: 500; transition: background 0.2s;"><span style="font-size: 1.2rem;">🇬🇧</span> English</a></li>
-                        <li><a href="#" onclick="doGTranslate('pt'); return false;" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-navy); padding: 8px 10px; border-radius: 10px; font-weight: 500; transition: background 0.2s;"><span style="font-size: 1.2rem;">🇵🇹</span> Português</a></li>
-                        <li><a href="#" onclick="doGTranslate('da'); return false;" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-navy); padding: 8px 10px; border-radius: 10px; font-weight: 500; transition: background 0.2s;"><span style="font-size: 1.2rem;">🇩🇰</span> Dansk</a></li>
-                        <li><a href="#" onclick="doGTranslate('nl'); return false;" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-navy); padding: 8px 10px; border-radius: 10px; font-weight: 500; transition: background 0.2s;"><span style="font-size: 1.2rem;">🇳🇱</span> Nederlands</a></li>
-                        <li><a href="#" onclick="doGTranslate('no'); return false;" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-navy); padding: 8px 10px; border-radius: 10px; font-weight: 500; transition: background 0.2s;"><span style="font-size: 1.2rem;">🇳🇴</span> Norsk</a></li>
-                        <li><a href="#" onclick="doGTranslate('es'); return false;" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-navy); padding: 8px 10px; border-radius: 10px; font-weight: 500; transition: background 0.2s;"><span style="font-size: 1.2rem;">🇪🇸</span> Español</a></li>
-                    </ul>
+                <li class="lang-switcher" style="display: flex; gap: 8px; margin-left: 15px; align-items: center;">
+                    <button class="flag-btn" data-lang="pt" title="Português (PT)" onclick="switchLanguage('pt')">🇵🇹</button>
+                    <button class="flag-btn" data-lang="es" title="Español" onclick="switchLanguage('es')">🇪🇸</button>
+                    <button class="flag-btn" data-lang="nl" title="Nederlands" onclick="switchLanguage('nl')">🇳🇱</button>
+                    <button class="flag-btn" data-lang="da" title="Dansk" onclick="switchLanguage('da')">🇩🇰</button>
+                    <button class="flag-btn" data-lang="no" title="Norsk" onclick="switchLanguage('no')">🇳🇴</button>
+                    <div style="width: 1px; height: 20px; background: var(--glass-border); margin: 0 5px;"></div>
+                    <button class="flag-btn active" data-lang="en" title="Reset to English" onclick="switchLanguage('en')" style="font-size: 0.9rem;">🇬🇧</button>
                 </li>
             </ul>
         </div>
@@ -632,54 +627,78 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <script src="script.js"></script>
+    <script src="translations.js"></script>
     <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'da,nl,es,no,pt',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
+        let currentLang = 'en';
 
-        function toggleLangMenu() {
-            var menu = document.getElementById('lang-menu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
+        function switchLanguage(lang) {
+            if (currentLang === lang) return;
+            currentLang = lang;
 
-        function doGTranslate(langValue) {
-            var teCombo = document.querySelector('.goog-te-combo');
-            if (teCombo) {
-                teCombo.value = langValue;
-                teCombo.dispatchEvent(new Event('change'));
+            // Update active state of buttons
+            document.querySelectorAll('.flag-btn').forEach(btn => {
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Translate all text nodes
+            const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+            let node;
+            const nodesToUpdate = [];
+            while(node = walk.nextNode()) {
+                if (node.parentElement && node.parentElement.tagName === 'SCRIPT') continue;
+                if (node.parentElement && node.parentElement.tagName === 'STYLE') continue;
                 
-                const flags = { 'en': '🇬🇧', 'pt': '🇵🇹', 'da': '🇩🇰', 'nl': '🇳🇱', 'no': '🇳🇴', 'es': '🇪🇸' };
-                document.getElementById('current-lang-flag').innerText = flags[langValue] || '🇬🇧';
+                const text = node.nodeValue.trim();
+                if (!text || text === '') continue;
                 
-                document.getElementById('lang-menu').style.display = 'none';
-            }
-        }
+                // Store original English text if not already stored
+                if (!node.originalText) {
+                    node.originalText = node.nodeValue;
+                }
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(event) {
-            var menu = document.getElementById('lang-menu');
-            var btn = document.querySelector('.lang-btn');
-            if (menu && menu.style.display === 'flex' && !btn.contains(event.target) && !menu.contains(event.target)) {
-                menu.style.display = 'none';
+                // Get original text and trimmed version for lookup
+                const originalText = node.originalText;
+                const trimmedKey = originalText.trim();
+                
+                // If translation exists, update
+                if (translations[lang] && translations[lang][trimmedKey]) {
+                    nodesToUpdate.push({ node, newValue: originalText.replace(trimmedKey, translations[lang][trimmedKey]) });
+                } else if (lang === 'en') {
+                    // Reset to English
+                    nodesToUpdate.push({ node, newValue: originalText });
+                }
             }
-        });
+            
+            nodesToUpdate.forEach(item => {
+                item.node.nodeValue = item.newValue;
+            });
+        }
     </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <style>
-        /* Hide google translate top bar and elements */
-        body { top: 0 !important; }
-        .skiptranslate { display: none !important; }
-        #goog-gt-tt { display: none !important; }
-        .goog-te-banner-frame { display: none !important; }
-        .goog-tooltip { display: none !important; }
-        .goog-tooltip:hover { display: none !important; }
-        .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
-        #lang-menu a:hover { background: rgba(0, 206, 209, 0.1); }
+        .flag-btn {
+            background: none;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1.5rem;
+            padding: 2px 6px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            opacity: 0.7;
+        }
+        .flag-btn:hover {
+            background: rgba(0, 0, 0, 0.05);
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+        .flag-btn.active {
+            background: rgba(0, 206, 209, 0.2);
+            border: 2px solid var(--color-teal, #00ced1);
+            opacity: 1;
+        }
     </style>
 </body>
 
