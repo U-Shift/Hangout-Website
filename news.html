@@ -188,11 +188,14 @@
                 
                 // Normalize internal whitespace (newlines, tabs) to a single space for dictionary lookup
                 const lookupKey = match[2].replace(/\s+/g, ' ');
+                const lookupKeyFull = originalText.replace(/\s+/g, ' ');
                 if (!lookupKey) continue;
                 
                 // If translation exists, update
                 if (translations[lang] && translations[lang][lookupKey]) {
                     nodesToUpdate.push({ node, newValue: match[1] + translations[lang][lookupKey] + match[3] });
+                } else if (translations[lang] && translations[lang][lookupKeyFull]) {
+                    nodesToUpdate.push({ node, newValue: translations[lang][lookupKeyFull] });
                 } else if (lang === 'en') {
                     // Reset to English
                     nodesToUpdate.push({ node, newValue: originalText });
