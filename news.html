@@ -25,21 +25,27 @@
                         style="height: 100px; max-width: 350px; width: auto; object-fit: contain;">
                 </a>
             </div>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html#about"><span data-i18n="T_ABOUT"></span></a></li>
                 <li><a href="index.html#objectives"><span data-i18n="T_OBJECTIVES"></span></a></li>
                 <li><a href="index.html#cities"><span data-i18n="T_CITIES"></span></a></li>
                 <li><a href="index.html#workpackages"><span data-i18n="T_WORK_PLAN"></span></a></li>
                 <li><a href="index.html#consortium"><span data-i18n="T_CONSORTIUM"></span></a></li>
-                <li><a href="news.html" style="color: var(--color-orange); font-weight: 700;"><span data-i18n="T_NEWS"></span></a></li>
+                <li><a href="news.html" style="color: var(--color-orange); font-weight: 700;"><span
+                            data-i18n="T_NEWS"></span></a></li>
                 <li class="lang-switcher" style="display: flex; gap: 8px; margin-left: 15px; align-items: center;">
-                    <button class="flag-btn" data-lang="pt" title="Português (PT)" onclick="switchLanguage('pt')">🇵🇹</button>
+                    <button class="flag-btn" data-lang="pt" title="Português (PT)"
+                        onclick="switchLanguage('pt')">🇵🇹</button>
                     <button class="flag-btn" data-lang="es" title="Español" onclick="switchLanguage('es')">🇪🇸</button>
-                    <button class="flag-btn" data-lang="nl" title="Nederlands" onclick="switchLanguage('nl')">🇳🇱</button>
+                    <button class="flag-btn" data-lang="nl" title="Nederlands"
+                        onclick="switchLanguage('nl')">🇳🇱</button>
                     <button class="flag-btn" data-lang="da" title="Dansk" onclick="switchLanguage('da')">🇩🇰</button>
                     <button class="flag-btn" data-lang="no" title="Norsk" onclick="switchLanguage('no')">🇳🇴</button>
-                    <div style="width: 1px; height: 20px; background: var(--glass-border); margin: 0 5px;"></div>
-                    <button class="flag-btn active" data-lang="en" title="Reset to English" onclick="switchLanguage('en')" style="font-size: 0.9rem;">🇬🇧</button>
+                    <button class="flag-btn active" data-lang="en" title="Reset to English"
+                        onclick="switchLanguage('en')" style="font-size: 0.9rem;">🇬🇧</button>
                 </li>
             </ul>
         </div>
@@ -56,8 +62,10 @@
             <div class="subtitle text-gradient" style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i
                     class="fa-solid fa-bolt"></i> <span data-i18n="T_BREAKING_GROUND"></span></div>
             <h1 class="headline" style="font-size: 4rem;"><span data-i18n="T_THE_LATEST_FROM"></span><span
-                    style="font-style: italic; color: var(--color-navy);"><span data-i18n="T_HANGOUT"></span></span></h1>
-            <p class="description" style="margin: 0 auto; margin-top: 1.5rem; font-size: 1.3rem;" data-i18n="T_STAY_UPDATED_ON_HOW_WE_ARE_EMP"></p>
+                    style="font-style: italic; color: var(--color-navy);"><span data-i18n="T_HANGOUT"></span></span>
+            </h1>
+            <p class="description" style="margin: 0 auto; margin-top: 1.5rem; font-size: 1.3rem;"
+                data-i18n="T_STAY_UPDATED_ON_HOW_WE_ARE_EMP"></p>
         </div>
     </section>
 
@@ -74,15 +82,18 @@
                 </div>
                 <div style="display: flex; flex-direction: column; justify-content: center;">
                     <span
-                        style="display: inline-block; padding: 0.3rem 0.8rem; background: var(--color-orange); color: white; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; width: fit-content;" data-i18n="T_FEATURED"></span>
-                    <h3
-                        style="font-family: var(--font-heading); font-size: 2rem; color: var(--color-navy); margin-bottom: 1rem; line-height: 1.2;" data-i18n="T_IN_PERSON_KICK_OFF_MEETING_AT_"></h3>
-                    <p
-                        style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;" data-i18n="T_THE_HANGOUT_CONSORTIUM_IS_SET_"></p>
+                        style="display: inline-block; padding: 0.3rem 0.8rem; background: var(--color-orange); color: white; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; width: fit-content;"
+                        data-i18n="T_FEATURED"></span>
+                    <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--color-navy); margin-bottom: 1rem; line-height: 1.2;"
+                        data-i18n="T_IN_PERSON_KICK_OFF_MEETING_AT_"></h3>
+                    <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;"
+                        data-i18n="T_THE_HANGOUT_CONSORTIUM_IS_SET_"></p>
                     <div
                         style="display: flex; align-items: center; gap: 1rem; font-size: 0.9rem; font-weight: 600; color: var(--color-teal);">
-                        <span><i class="fa-regular fa-calendar" style="margin-right: 0.3rem;"></i> <span data-i18n="T_MAY_12_2026"></span></span>
-                        <span><i class="fa-regular fa-clock" style="margin-right: 0.3rem;"></i> <span data-i18n="T_2_MIN_READ"></span></span>
+                        <span><i class="fa-regular fa-calendar" style="margin-right: 0.3rem;"></i> <span
+                                data-i18n="T_MAY_12_2026"></span></span>
+                        <span><i class="fa-regular fa-clock" style="margin-right: 0.3rem;"></i> <span
+                                data-i18n="T_2_MIN_READ"></span></span>
                     </div>
                 </div>
             </div>
@@ -96,9 +107,10 @@
                     <div style="font-size: 3rem; color: var(--color-text-muted); margin-bottom: 1rem; opacity: 0.5;">
                         <i class="fa-regular fa-newspaper"></i>
                     </div>
-                    <h4
-                        style="font-size: 1.25rem; color: var(--color-text-muted); margin-bottom: 0.5rem; line-height: 1.3;" data-i18n="T_MORE_NEWS_COMING_SOON"></h4>
-                    <p style="font-size: 0.95rem; color: var(--color-text-muted); opacity: 0.7;" data-i18n="T_CHECK_BACK_LATER_AS_OUR_EVENTS"></p>
+                    <h4 style="font-size: 1.25rem; color: var(--color-text-muted); margin-bottom: 0.5rem; line-height: 1.3;"
+                        data-i18n="T_MORE_NEWS_COMING_SOON"></h4>
+                    <p style="font-size: 0.95rem; color: var(--color-text-muted); opacity: 0.7;"
+                        data-i18n="T_CHECK_BACK_LATER_AS_OUR_EVENTS"></p>
                 </div>
 
             </div>
@@ -116,8 +128,9 @@
                                 style="height: 100px; width: auto; object-fit: contain;">
                         </a>
                     </div>
-                    <p class="footer-note"><span data-i18n="T_UNLOCKING_ADOLESCENTS_URBAN_AC">Unlocking adolescents' urban accessibility and sustainable mobility. DUT
-                        Partnership Call 2024, 15-Minute City Pathway. January 2026 – December 2028.</span></p>
+                    <p class="footer-note"><span data-i18n="T_UNLOCKING_ADOLESCENTS_URBAN_AC">Unlocking adolescents'
+                            urban accessibility and sustainable mobility. DUT
+                            Partnership Call 2024, 15-Minute City Pathway. January 2026 – December 2028.</span></p>
                 </div>
                 <ul class="footer-links">
                     <li><a href="index.html#about"><span data-i18n="T_ABOUT"></span></a></li>
@@ -125,8 +138,10 @@
                     <li><a href="index.html#cities"><span data-i18n="T_CITIES"></span></a></li>
                     <li><a href="index.html#consortium"><span data-i18n="T_TEAM"></span></a></li>
                 </ul>
-                <div style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-end; justify-content: center;">
-                    <img src="DUT.jpg" alt="DUT Logo" style="height: 55px; width: auto; object-fit: contain; mix-blend-mode: multiply;">
+                <div
+                    style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-end; justify-content: center;">
+                    <img src="DUT.jpg" alt="DUT Logo"
+                        style="height: 55px; width: auto; object-fit: contain; mix-blend-mode: multiply;">
                     <img src="EU.png" alt="EU Logo" style="height: 55px; width: auto; object-fit: contain;">
                 </div>
             </div>
@@ -136,6 +151,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script src="locales/en.js"></script>
     <script src="locales/pt.js"></script>
     <script src="locales/es.js"></script>
@@ -154,11 +170,13 @@
             transition: all 0.2s ease;
             opacity: 0.7;
         }
+
         .flag-btn:hover {
             background: rgba(0, 0, 0, 0.05);
             transform: scale(1.1);
             opacity: 0.9;
         }
+
         .flag-btn.active {
             background: rgba(0, 206, 209, 0.2);
             border: 2px solid var(--color-teal, #00ced1);
