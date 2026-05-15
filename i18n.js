@@ -4,6 +4,7 @@ let currentLang = '';
 function switchLanguage(lang) {
     if (currentLang === lang) return;
     currentLang = lang;
+    localStorage.setItem('preferredLang', lang);
 
     // Update active state of buttons
     document.querySelectorAll('.flag-btn').forEach(btn => {
@@ -26,7 +27,24 @@ function switchLanguage(lang) {
     });
 }
 
+function getDefaultLanguage() {
+    const savedLang = localStorage.getItem('preferredLang');
+    if (savedLang && translations[savedLang]) {
+        return savedLang;
+    }
+
+    const browserLang = navigator.language || navigator.userLanguage;
+    if (browserLang) {
+        const shortLang = browserLang.split('-')[0].toLowerCase();
+        if (translations[shortLang]) {
+            return shortLang;
+        }
+    }
+
+    return 'en';
+}
+
 // Initialize default language
 window.addEventListener('DOMContentLoaded', () => {
-    switchLanguage('en');
+    switchLanguage(getDefaultLanguage());
 });
