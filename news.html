@@ -73,33 +73,12 @@
     <section class="news-updates" style="padding: 2rem 0 6rem; position: relative; z-index: 10;">
         <div class="container">
             <!-- News Feature Card -->
-            <div class="partner-card news-feature-card"
-                style="gap: 2.5rem; text-align: left; padding: 2rem; max-width: 1000px; margin: 0 auto 3rem; cursor: default; transform: none; height: auto;">
-                <div
-                    style="border-radius: 12px; overflow: hidden; background: rgba(0,0,0,0.05); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/youth_mobility_new.png" alt="Youth Mobility Kickoff"
-                        style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
-                </div>
-                <div style="display: flex; flex-direction: column; justify-content: center;">
-                    <span
-                        style="display: inline-block; padding: 0.3rem 0.8rem; background: var(--color-orange); color: white; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; width: fit-content;"
-                        data-i18n="T_FEATURED"></span>
-                    <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--color-navy); margin-bottom: 1rem; line-height: 1.2;"
-                        data-i18n="T_IN_PERSON_KICK_OFF_MEETING_AT_"></h3>
-                    <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;"
-                        data-i18n="T_THE_HANGOUT_CONSORTIUM_IS_SET_"></p>
-                    <div
-                        style="display: flex; align-items: center; gap: 1rem; font-size: 0.9rem; font-weight: 600; color: var(--color-teal);">
-                        <span><i class="fa-regular fa-calendar" style="margin-right: 0.3rem;"></i> <span
-                                data-i18n="T_MAY_12_2026"></span></span>
-                        <span><i class="fa-regular fa-clock" style="margin-right: 0.3rem;"></i> <span
-                                data-i18n="T_2_MIN_READ"></span></span>
-                    </div>
-                </div>
+            <div id="featured-news-container">
+                <!-- Dynamically populated by news_data.js -->
             </div>
 
             <!-- Standard News Grid -->
-            <div class="news-grid"
+            <div class="news-grid" id="standard-news-container"
                 style="gap: 2rem; max-width: 1200px; margin: 0 auto;">
 
                 <div class="partner-card"
@@ -151,6 +130,8 @@
         </div>
     </footer>
 
+    <script src="news_articles.js"></script>
+    <script src="news_data.js"></script>
     <script src="script.js"></script>
     <script src="locales/en.js"></script>
     <script src="locales/pt.js"></script>

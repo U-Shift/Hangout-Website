@@ -25,6 +25,9 @@ function switchLanguage(lang) {
             el.innerHTML = translations['en'][key];
         }
     });
+
+    // Notify other scripts that language has changed
+    document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
 }
 
 function getDefaultLanguage() {
