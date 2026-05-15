@@ -135,5 +135,16 @@ const en = {
   "T_CONTACT_THE_TEAM": "Contact the team",
   "T_UNLOCKING_ADOLESCENTS_URBAN_AC": "Unlocking adolescents' urban accessibility and sustainable mobility. DUT Partnership Call 2024, 15-Minute City Pathway. January 2026 – December 2028.",
   "T_TEAM": "Team",
-  "T_2026_HANGOUT_YOUTH_MOBILITY_UR": "© 2026 HANGOUT: Youth Mobility & Urban Innovation. All rights reserved."
+  "T_2026_HANGOUT_YOUTH_MOBILITY_UR": "© 2026 HANGOUT: Youth Mobility & Urban Innovation. All rights reserved.",
+  "T_BREAKING_GROUND": "Breaking Ground",
+  "T_THE_LATEST_FROM": "The Latest from ",
+  "T_HANGOUT": "HANGOUT",
+  "T_STAY_UPDATED_ON_HOW_WE_ARE_EMP": "Stay updated on how we are empowering youth mobility, testing innovations, and building tools for the 15-minute city generation.",
+  "T_FEATURED": "Featured",
+  "T_IN_PERSON_KICK_OFF_MEETING_AT_": "In-Person Kick-off Meeting at IST Lisbon",
+  "T_THE_HANGOUT_CONSORTIUM_IS_SET_": "The HANGOUT consortium is set to gather in person this upcoming <strong>May 12</strong> at the <strong>Instituto Superior Técnico de Lisboa</strong>. This initial team meeting will serve as a foundational step to align methodologies, define the next steps for our comparative cross-city research, and establish a strong collaborative momentum for the entire 36-month journey ahead.",
+  "T_MAY_12_2026": "May 12, 2026",
+  "T_2_MIN_READ": "2 min read",
+  "T_MORE_NEWS_COMING_SOON": "More news coming soon...",
+  "T_CHECK_BACK_LATER_AS_OUR_EVENTS": "Check back later as our events and findings are published."
 };
