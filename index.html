@@ -24,23 +24,30 @@
                 <img src="12-logo.png" alt="Hangout Logo"
                     style="height: 100px; max-width: 350px; width: auto; object-fit: contain;">
             </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#objectives">Objectives</a></li>
-                <li><a href="#cities">Cities</a></li>
-                <li><a href="#workpackages">Work Plan</a></li>
-                <li><a href="#consortium">Consortium</a></li>
-                <li><a href="news.html" target="_blank" style="color: var(--color-orange); font-weight: 700;">News</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about"><span data-i18n="T_ABOUT"></span></a></li>
+                <li><a href="#objectives"><span data-i18n="T_OBJECTIVES"></span></a></li>
+                <li><a href="#cities"><span data-i18n="T_CITIES"></span></a></li>
+                <li><a href="#workpackages"><span data-i18n="T_WORK_PLAN"></span></a></li>
+                <li><a href="#consortium"><span data-i18n="T_CONSORTIUM"></span></a></li>
+                <li><a href="news.html" target="_blank" style="color: var(--color-orange); font-weight: 700;"><span
+                            data-i18n="T_NEWS"></span></a>
                 </li>
-                <li><a href="#contact" class="btn-primary small" style="color: white;">Get Started</a></li>
+                <li><a href="#contact" class="btn-primary small" style="color: white;"><span
+                            data-i18n="T_GET_STARTED"></span></a></li>
                 <li class="lang-switcher" style="display: flex; gap: 8px; margin-left: 15px; align-items: center;">
-                    <button class="flag-btn" data-lang="pt" title="Português (PT)" onclick="switchLanguage('pt')">🇵🇹</button>
+                    <button class="flag-btn" data-lang="pt" title="Português (PT)"
+                        onclick="switchLanguage('pt')">🇵🇹</button>
                     <button class="flag-btn" data-lang="es" title="Español" onclick="switchLanguage('es')">🇪🇸</button>
-                    <button class="flag-btn" data-lang="nl" title="Nederlands" onclick="switchLanguage('nl')">🇳🇱</button>
+                    <button class="flag-btn" data-lang="nl" title="Nederlands"
+                        onclick="switchLanguage('nl')">🇳🇱</button>
                     <button class="flag-btn" data-lang="da" title="Dansk" onclick="switchLanguage('da')">🇩🇰</button>
                     <button class="flag-btn" data-lang="no" title="Norsk" onclick="switchLanguage('no')">🇳🇴</button>
-                    <div style="width: 1px; height: 20px; background: var(--glass-border); margin: 0 5px;"></div>
-                    <button class="flag-btn active" data-lang="en" title="Reset to English" onclick="switchLanguage('en')" style="font-size: 0.9rem;">🇬🇧</button>
+                    <button class="flag-btn active" data-lang="en" title="Reset to English"
+                        onclick="switchLanguage('en')" style="font-size: 0.9rem;">🇬🇧</button>
                 </li>
             </ul>
         </div>
@@ -55,36 +62,38 @@
         <div class="container hero-content">
             <div class="hero-text-area" data-depth="0.1">
 
-                <h1 class="headline">Urban access for every <span class="text-gradient">adolescent.</span></h1>
+                <h1 class="headline"><span data-i18n="T_URBAN_ACCESS_FOR_EVERY"></span> <span
+                        class="text-gradient"><span data-i18n="T_ADOLESCENT"></span></span></h1>
                 <p class="description">
-                    HANGOUT puts 14–18 year-olds at the centre of sustainable mobility planning — mapping their needs,
-                    breaking down barriers, and co-creating tools with them across four European cities.
+                    <span data-i18n="T_HANGOUT_PUTS_14_18_YEAR_OLDS_A">HANGOUT puts 14–18 year-olds at the centre of
+                        sustainable mobility planning — mapping their needs,
+                        breaking down barriers, and co-creating tools with them across four European cities.</span>
                 </p>
                 <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-                    <a href="#about" class="btn-primary large">Explore Project <i
+                    <a href="#about" class="btn-primary large"><span data-i18n="T_EXPLORE_PROJECT"></span> <i
                             class="fa-solid fa-arrow-right"></i></a>
                     <a href="#consortium"
                         style="font-weight: 600; color: var(--color-navy); display: flex; align-items: center; gap: 0.5rem;">
-                        Meet the team
+                        <span data-i18n="T_MEET_THE_TEAM"></span>
                     </a>
                 </div>
 
                 <div class="hero-stats">
                     <div>
                         <div class="stat-val">4</div>
-                        <div class="stat-lbl">European cities</div>
+                        <div class="stat-lbl"><span data-i18n="T_EUROPEAN_CITIES"></span></div>
                     </div>
                     <div>
                         <div class="stat-val">36<sup>mo</sup></div>
-                        <div class="stat-lbl">Project duration</div>
+                        <div class="stat-lbl"><span data-i18n="T_PROJECT_DURATION"></span></div>
                     </div>
                     <div>
                         <div class="stat-val">8</div>
-                        <div class="stat-lbl">Partner institutions</div>
+                        <div class="stat-lbl"><span data-i18n="T_PARTNER_INSTITUTIONS"></span></div>
                     </div>
                     <div>
                         <div class="stat-val">14–18</div>
-                        <div class="stat-lbl">Age group</div>
+                        <div class="stat-lbl"><span data-i18n="T_AGE_GROUP"></span></div>
                     </div>
                 </div>
             </div>
@@ -103,7 +112,7 @@
 
                     <div class="main-video-card">
                         <img src="assets/youth_mobility.png" alt="Empowering Youth Mobility" class="hero-image">
-                        <div class="glass-tag">Empowering Youth</div>
+                        <div class="glass-tag"><span data-i18n="T_EMPOWERING_YOUTH"></span></div>
                     </div>
                 </div>
             </div>
@@ -113,25 +122,37 @@
     <!-- Ticker -->
     <div class="ticker-wrap">
         <div class="ticker">
-            <span class="ticker-item"><span class="ticker-dot"></span>Active mobility</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>15-minute city</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Youth participation</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Urban living labs</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Transport justice</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Spatial analysis</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Co-design</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Open-source tools</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Intersectionality</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="T_ACTIVE_MOBILITY"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="T_15_MINUTE_CITY"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span
+                    data-i18n="T_YOUTH_PARTICIPATION"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span
+                    data-i18n="T_URBAN_LIVING_LABS"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span
+                    data-i18n="T_TRANSPORT_JUSTICE"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span
+                    data-i18n="T_SPATIAL_ANALYSIS"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="T_CO_DESIGN"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span
+                    data-i18n="T_OPEN_SOURCE_TOOLS"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span
+                    data-i18n="T_INTERSECTIONALITY"></span></span>
             <!-- duplicate for smooth loop -->
-            <span class="ticker-item"><span class="ticker-dot"></span>Active mobility</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>15-minute city</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Youth participation</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Urban living labs</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Transport justice</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Spatial analysis</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Co-design</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Open-source tools</span>
-            <span class="ticker-item"><span class="ticker-dot"></span>Intersectionality</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="T_ACTIVE_MOBILITY"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="T_15_MINUTE_CITY"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span
+                    data-i18n="T_YOUTH_PARTICIPATION"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span
+                    data-i18n="T_URBAN_LIVING_LABS"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span
+                    data-i18n="T_TRANSPORT_JUSTICE"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span
+                    data-i18n="T_SPATIAL_ANALYSIS"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span data-i18n="T_CO_DESIGN"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span
+                    data-i18n="T_OPEN_SOURCE_TOOLS"></span></span>
+            <span class="ticker-item"><span class="ticker-dot"></span><span
+                    data-i18n="T_INTERSECTIONALITY"></span></span>
         </div>
     </div>
 
@@ -139,22 +160,31 @@
     <section class="about" id="about">
         <div class="container">
             <div class="section-header">
-                <div class="subtitle text-gradient">About HANGOUT</div>
-                <h2>Adolescents are the <span style="font-style: italic; color: var(--color-orange);">missing
-                        piece</span><br>in the 15-minute city.</h2>
+                <div class="subtitle text-gradient"><span data-i18n="T_ABOUT_HANGOUT"></span></div>
+                <h2><span data-i18n="T_ADOLESCENTS_ARE_THE"></span> <span
+                        style="font-style: italic; color: var(--color-orange);"><span
+                            data-i18n="T_MISSING_PIECE">missing
+                            piece</span></span><br><span data-i18n="T_IN_THE_15_MINUTE_CITY"></span></h2>
             </div>
             <div class="grid-2">
                 <div class="about-text">
-                    <p>The 15-minute city concept promotes proximity, accessibility and decarbonisation — but it largely
-                        overlooks the specific mobility needs and aspirations of adolescents aged 14–18 transitioning
-                        into adulthood.</p>
-                    <p>HANGOUT addresses this gap head-on. Through comparative research across four European cities,
-                        <strong style="color:var(--color-navy)">Urban Living Labs</strong> in Lisbon and Holbæk, and
-                        open-source digital tools, the project puts young people at the centre of planning processes.
+                    <p><span data-i18n="T_THE_15_MINUTE_CITY_CONCEPT_PRO">The 15-minute city concept promotes proximity,
+                            accessibility and decarbonisation — but it largely
+                            overlooks the specific mobility needs and aspirations of adolescents aged 14–18
+                            transitioning
+                            into adulthood.</span></p>
+                    <p><span data-i18n="T_HANGOUT_ADDRESSES_THIS_GAP_HEA"></span>
+                        <strong style="color:var(--color-navy)"><span data-i18n="T_URBAN_LIVING_LABS_1"></span></strong>
+                        <span data-i18n="T_IN_LISBON_AND_HOLB_K_AND_OPEN">in Lisbon and Holbæk, and
+                            open-source digital tools, the project puts young people at the centre of planning
+                            processes.</span>
                     </p>
-                    <p><strong style="color:var(--color-navy)">Our core research question:</strong> How can
-                        adolescent-inclusive urban mobility systems support sustainable transitions and strengthen young
-                        people's engagement in shaping their cities?</p>
+                    <p><strong style="color:var(--color-navy)"><span
+                                data-i18n="T_OUR_CORE_RESEARCH_QUESTION"></span></strong> <span
+                            data-i18n="T_HOW_CAN_ADOLESCENT_INCLUSIVE_U">How can
+                            adolescent-inclusive urban mobility systems support sustainable transitions and strengthen
+                            young
+                            people's engagement in shaping their cities?</span></p>
 
                 </div>
 
@@ -162,28 +192,31 @@
                     <div class="phase-card">
                         <div class="phase-header">
                             <div class="phase-num s1">S1</div>
-                            <h4>Stage 1 — Diagnostic & Strategy</h4>
+                            <h4><span data-i18n="T_STAGE_1_DIAGNOSTIC_STRATEGY"></span></h4>
                         </div>
-                        <p>Background research, adolescent mobility data collection, governance mapping and benchmarking
-                            of policies and urban systems across four cities.</p>
+                        <p><span data-i18n="T_BACKGROUND_RESEARCH_ADOLESCENT">Background research, adolescent mobility
+                                data collection, governance mapping and benchmarking
+                                of policies and urban systems across four cities.</span></p>
                         <span class="phase-months">M1 – M16</span>
                     </div>
                     <div class="phase-card">
                         <div class="phase-header">
                             <div class="phase-num s2">S2</div>
-                            <h4>Stage 2 — Co-Creation & Tools</h4>
+                            <h4><span data-i18n="T_STAGE_2_CO_CREATION_TOOLS"></span></h4>
                         </div>
-                        <p>Urban Living Labs in Lisbon and Holbæk, participatory workshops with adolescents, and
-                            development of the HANGOUT Atlas and Policy Toolkit.</p>
+                        <p><span data-i18n="T_URBAN_LIVING_LABS_IN_LISBON_AN">Urban Living Labs in Lisbon and Holbæk,
+                                participatory workshops with adolescents, and
+                                development of the HANGOUT Atlas and Policy Toolkit.</span></p>
                         <span class="phase-months">M13 – M34</span>
                     </div>
                     <div class="phase-card">
                         <div class="phase-header">
                             <div class="phase-num s3"><i class="fa-solid fa-arrow-right"></i></div>
-                            <h4>Throughout — Dissemination</h4>
+                            <h4><span data-i18n="T_THROUGHOUT_DISSEMINATION"></span></h4>
                         </div>
-                        <p>Engagement with the DUT Knowledge Hub, policy briefs, peer-reviewed publications, and open
-                            data to support cities across Europe and beyond.</p>
+                        <p><span data-i18n="T_ENGAGEMENT_WITH_THE_DUT_KNOWLE">Engagement with the DUT Knowledge Hub,
+                                policy briefs, peer-reviewed publications, and open
+                                data to support cities across Europe and beyond.</span></p>
                         <span class="phase-months">M1 – M36</span>
                     </div>
                 </div>
@@ -195,37 +228,43 @@
     <section class="features" id="objectives">
         <div class="container">
             <div class="section-header">
-                <div class="subtitle text-gradient">Specific Objectives</div>
-                <h2>Four goals. <span style="font-style: italic; color: var(--color-orange);">One mission.</span></h2>
+                <div class="subtitle text-gradient"><span data-i18n="T_SPECIFIC_OBJECTIVES"></span></div>
+                <h2><span data-i18n="T_FOUR_GOALS"></span> <span
+                        style="font-style: italic; color: var(--color-orange);"><span
+                            data-i18n="T_ONE_MISSION"></span></span></h2>
             </div>
             <div class="cards-grid">
                 <div class="glass-feature-card" data-tilt>
                     <div class="obj-so">SO1</div>
                     <div class="card-icon-wrapper orange"><i class="fa-solid fa-magnifying-glass-location"></i></div>
-                    <h3>Understand mobility patterns & needs</h3>
-                    <p>Collect and analyse data on adolescents' lived accessibility experiences across four European
-                        cities, beyond school commutes.</p>
+                    <h3><span data-i18n="T_UNDERSTAND_MOBILITY_PATTERNS_N"></span></h3>
+                    <p><span data-i18n="T_COLLECT_AND_ANALYSE_DATA_ON_AD">Collect and analyse data on adolescents' lived
+                            accessibility experiences across four European
+                            cities, beyond school commutes.</span></p>
                 </div>
                 <div class="glass-feature-card" data-tilt>
                     <div class="obj-so">SO2</div>
                     <div class="card-icon-wrapper teal"><i class="fa-solid fa-unlock-keyhole"></i></div>
-                    <h3>Unlock barriers to sustainable choices</h3>
-                    <p>Identify and address structural, institutional, and spatial barriers limiting adolescents' access
-                        to sustainable mobility options.</p>
+                    <h3><span data-i18n="T_UNLOCK_BARRIERS_TO_SUSTAINABLE"></span></h3>
+                    <p><span data-i18n="T_IDENTIFY_AND_ADDRESS_STRUCTURA">Identify and address structural,
+                            institutional, and spatial barriers limiting adolescents' access
+                            to sustainable mobility options.</span></p>
                 </div>
                 <div class="glass-feature-card" data-tilt>
                     <div class="obj-so">SO3</div>
                     <div class="card-icon-wrapper navy"><i class="fa-solid fa-handshake-angle"></i></div>
-                    <h3>Co-design through Urban Living Labs</h3>
-                    <p>Actively engage adolescents through ULLs in Lisbon and Holbæk, with Adolescent Councils driving
-                        co-creation of solutions.</p>
+                    <h3><span data-i18n="T_CO_DESIGN_THROUGH_URBAN_LIVING"></span></h3>
+                    <p><span data-i18n="T_ACTIVELY_ENGAGE_ADOLESCENTS_TH">Actively engage adolescents through ULLs in
+                            Lisbon and Holbæk, with Adolescent Councils driving
+                            co-creation of solutions.</span></p>
                 </div>
                 <div class="glass-feature-card" data-tilt>
                     <div class="obj-so">SO4</div>
                     <div class="card-icon-wrapper purple"><i class="fa-solid fa-hammer"></i></div>
-                    <h3>Build replicable, scalable tools</h3>
-                    <p>Deliver the open-source HANGOUT Atlas and Policy Toolkit for adolescent-inclusive urban planning,
-                        tested across multiple cities.</p>
+                    <h3><span data-i18n="T_BUILD_REPLICABLE_SCALABLE_TOOL"></span></h3>
+                    <p><span data-i18n="T_DELIVER_THE_OPEN_SOURCE_HANGOU">Deliver the open-source HANGOUT Atlas and
+                            Policy Toolkit for adolescent-inclusive urban planning,
+                            tested across multiple cities.</span></p>
                 </div>
             </div>
         </div>
@@ -235,8 +274,10 @@
     <section class="cities" id="cities">
         <div class="container">
             <div class="section-header">
-                <div class="subtitle text-gradient">Study Sites</div>
-                <h2>Four cities, <span style="font-style: italic; color: var(--color-teal);">one framework.</span></h2>
+                <div class="subtitle text-gradient"><span data-i18n="T_STUDY_SITES"></span></div>
+                <h2><span data-i18n="T_FOUR_CITIES"></span> <span
+                        style="font-style: italic; color: var(--color-teal);"><span
+                            data-i18n="T_ONE_FRAMEWORK"></span></span></h2>
             </div>
             <div class="grid-2">
                 <div class="cities-map-area">
@@ -248,34 +289,34 @@
                     <div class="city-row-card">
                         <span class="city-flag-big">🇵🇹</span>
                         <div class="city-info">
-                            <h4>Lisbon</h4>
-                            <span>Large Southern European metropolis · compact, diverse, active mobility...</span>
+                            <h4><span data-i18n="T_LISBON"></span></h4>
+                            <span><span data-i18n="T_LARGE_SOUTHERN_EUROPEAN_METROP"></span></span>
                         </div>
-                        <span class="city-badge-sm pilot">Pilot</span>
+                        <span class="city-badge-sm pilot"><span data-i18n="T_PILOT"></span></span>
                     </div>
                     <div class="city-row-card">
                         <span class="city-flag-big">🇩🇰</span>
                         <div class="city-info">
-                            <h4>Holbæk</h4>
-                            <span>Small Nordic city · strong cycling culture · CO₂ reduction commitments</span>
+                            <h4><span data-i18n="T_HOLB_K"></span></h4>
+                            <span><span data-i18n="T_SMALL_NORDIC_CITY_STRONG_CYCLI"></span></span>
                         </div>
-                        <span class="city-badge-sm pilot">Pilot</span>
+                        <span class="city-badge-sm pilot"><span data-i18n="T_PILOT"></span></span>
                     </div>
                     <div class="city-row-card">
                         <span class="city-flag-big">🇪🇸</span>
                         <div class="city-info">
-                            <h4>Cornellà de Llobregat</h4>
-                            <span>Dense Barcelona suburb · Southern European comparative context</span>
+                            <h4><span data-i18n="T_CORNELL_DE_LLOBREGAT"></span></h4>
+                            <span><span data-i18n="T_DENSE_BARCELONA_SUBURB_SOUTHER"></span></span>
                         </div>
-                        <span class="city-badge-sm observer">Observer</span>
+                        <span class="city-badge-sm observer"><span data-i18n="T_OBSERVER"></span></span>
                     </div>
                     <div class="city-row-card">
                         <span class="city-flag-big">🇳🇴</span>
                         <div class="city-info">
-                            <h4>Asker</h4>
-                            <span>Norwegian peri-urban municipality · rural-urban mobility dynamics</span>
+                            <h4><span data-i18n="T_ASKER"></span></h4>
+                            <span><span data-i18n="T_NORWEGIAN_PERI_URBAN_MUNICIPAL"></span></span>
                         </div>
-                        <span class="city-badge-sm observer">Observer</span>
+                        <span class="city-badge-sm observer"><span data-i18n="T_OBSERVER"></span></span>
                     </div>
                 </div>
             </div>
@@ -286,49 +327,52 @@
     <section class="workpackages" id="workpackages">
         <div class="container">
             <div class="section-header">
-                <div class="subtitle text-gradient">Work Plan</div>
-                <h2>Seven work packages. <span style="font-style: italic; color: var(--color-navy);">36 months.</span>
+                <div class="subtitle text-gradient"><span data-i18n="T_WORK_PLAN"></span></div>
+                <h2><span data-i18n="T_SEVEN_WORK_PACKAGES"></span> <span
+                        style="font-style: italic; color: var(--color-navy);"><span
+                            data-i18n="T_36_MONTHS"></span></span>
                 </h2>
             </div>
             <div class="wp-grid">
                 <div class="wp-card">
                     <div class="wp-num" style="background:#007940">WP1</div>
                     <div class="wp-body">
-                        <h4>Background Research & Framework</h4>
-                        <p>Systematic review, scenario-building, stakeholder workshop, ethical protocol and KPIs.</p>
+                        <h4><span data-i18n="T_BACKGROUND_RESEARCH_FRAMEWORK"></span></h4>
+                        <p><span data-i18n="T_SYSTEMATIC_REVIEW_SCENARIO_BUI"></span></p>
                     </div>
                     <div class="wp-meta">TU Delft<br>M1–6</div>
                 </div>
                 <div class="wp-card">
                     <div class="wp-num" style="background:#00a0e2">WP2</div>
                     <div class="wp-body">
-                        <h4>Evaluating Mobility & 15-Min City</h4>
-                        <p>Primary data collection, travel behaviour modelling and equity impact assessment
-                            cross-cities.</p>
+                        <h4><span data-i18n="T_EVALUATING_MOBILITY_15_MIN_CIT"></span></h4>
+                        <p><span data-i18n="T_PRIMARY_DATA_COLLECTION_TRAVEL">Primary data collection, travel behaviour
+                                modelling and equity impact assessment
+                                cross-cities.</span></p>
                     </div>
                     <div class="wp-meta">OsloMet<br>M7–16</div>
                 </div>
                 <div class="wp-card">
                     <div class="wp-num" style="background:#e84e10">WP3</div>
                     <div class="wp-body">
-                        <h4>Evaluating Policies & Systems</h4>
-                        <p>Governance mapping, Sociotechnical Systems Analysis, stakeholder interviews.</p>
+                        <h4><span data-i18n="T_EVALUATING_POLICIES_SYSTEMS"></span></h4>
+                        <p><span data-i18n="T_GOVERNANCE_MAPPING_SOCIOTECHNI"></span></p>
                     </div>
                     <div class="wp-meta">UAB<br>M7–16</div>
                 </div>
                 <div class="wp-card">
                     <div class="wp-num" style="background:#9333ea">WP4</div>
                     <div class="wp-body">
-                        <h4>Urban Living Labs (ULLs)</h4>
-                        <p>Adolescent Councils and Core Teams in Lisbon and Holbæk; co-design workshops.</p>
+                        <h4><span data-i18n="T_URBAN_LIVING_LABS_ULLS"></span></h4>
+                        <p><span data-i18n="T_ADOLESCENT_COUNCILS_AND_CORE_T"></span></p>
                     </div>
                     <div class="wp-meta">DTU<br>M13–34</div>
                 </div>
                 <div class="wp-card">
                     <div class="wp-num" style="background:#003da6">WP5</div>
                     <div class="wp-body">
-                        <h4>HANGOUT Atlas & Policy Toolkit</h4>
-                        <p>Open-source interactive GIS platform for participatory mapping and accessibility analysis.
+                        <h4><span data-i18n="T_HANGOUT_ATLAS_POLICY_TOOLKIT"></span></h4>
+                        <p><span data-i18n="T_OPEN_SOURCE_INTERACTIVE_GIS_PL"></span>
                         </p>
                     </div>
                     <div class="wp-meta">IST-ID<br>M18–34</div>
@@ -336,17 +380,19 @@
                 <div class="wp-card">
                     <div class="wp-num" style="background:#57534E">WP6</div>
                     <div class="wp-body">
-                        <h4>Project Management</h4>
-                        <p>Coordination, MEL framework, Data & IPR Plan, and Communication strategy.</p>
+                        <h4><span data-i18n="T_PROJECT_MANAGEMENT"></span></h4>
+                        <p><span data-i18n="T_COORDINATION_MEL_FRAMEWORK_DAT"></span></p>
                     </div>
                     <div class="wp-meta">IST-ID<br>M1–36</div>
                 </div>
                 <div class="wp-card full">
                     <div class="wp-num" style="background:#1C1917">WP7</div>
                     <div class="wp-body">
-                        <h4>HANGOUT & the DUT Knowledge Hub</h4>
-                        <p>Active engagement with DUT's 15-Minute City Knowledge Hub — co-authored outputs, policy
-                            briefs, and science-to-policy translation. Led by IST-ID (Filipe Moura, DUT Ambassador).</p>
+                        <h4><span data-i18n="T_HANGOUT_THE_DUT_KNOWLEDGE_HUB"></span></h4>
+                        <p><span data-i18n="T_ACTIVE_ENGAGEMENT_WITH_DUT_S_1">Active engagement with DUT's 15-Minute
+                                City Knowledge Hub — co-authored outputs, policy
+                                briefs, and science-to-policy translation. Led by IST-ID (Filipe Moura, DUT
+                                Ambassador).</span></p>
                     </div>
                     <div class="wp-meta">IST-ID<br>M1–36</div>
                 </div>
@@ -358,9 +404,10 @@
     <section class="consortium" id="consortium">
         <div class="container">
             <div class="section-header">
-                <div class="subtitle text-gradient">Consortium</div>
-                <h2>Eight institutions. <span style="font-style: italic; color: var(--color-orange);">Five
-                        countries.</span></h2>
+                <div class="subtitle text-gradient"><span data-i18n="T_CONSORTIUM"></span></div>
+                <h2><span data-i18n="T_EIGHT_INSTITUTIONS"></span> <span
+                        style="font-style: italic; color: var(--color-orange);"><span data-i18n="T_FIVE_COUNTRIES">Five
+                            countries.</span></span></h2>
             </div>
             <div class="partners-grid">
                 <div class="partner-card" onclick="this.classList.toggle('flipped')" title="Click to view team">
@@ -370,29 +417,37 @@
                                     src="https://www.google.com/s2/favicons?sz=128&domain_url=tecnico.ulisboa.pt"
                                     alt="IST-ID">
                             </div>
-                            <h4>Instituto Superior Técnico</h4><span class="partner-country">🇵🇹 Portugal</span><span
-                                class="partner-role-tag role-coord">Coordinator</span>
+                            <h4><span data-i18n="T_INSTITUTO_SUPERIOR_T_CNICO"></span></h4><span
+                                class="partner-country">🇵🇹 Portugal</span><span
+                                class="partner-role-tag role-coord"><span data-i18n="T_COORDINATOR"></span></span>
                         </div>
                         <div class="partner-card-back" onclick="event.stopPropagation()">
                             <h4 onclick="this.closest('.partner-card').classList.remove('flipped');"><i
                                     class="fa-solid fa-rotate-left" style="font-size: 0.9em; margin-right: 5px;"></i>
-                                The Team</h4>
+                                <span data-i18n="T_THE_TEAM"></span>
+                            </h4>
                             <div class="team-list">
                                 <div><a href="https://www.linkedin.com/in/mourafilipe/" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Filipe Moura</a><span
-                                        class="team-role">Project coordinator</span></div>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_FILIPE_MOURA"></span></a><span class="team-role"><span
+                                            data-i18n="T_PROJECT_COORDINATOR"></span></span></div>
                                 <div><a href="https://www.linkedin.com/in/j%C3%A9ssica-g-lucena/?locale=pt"
-                                        target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> Jéssica
-                                        Lucena</a></div>
+                                        target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_J_SSICA_LUCENA">Jéssica
+                                            Lucena</span></a></div>
                                 <div><a href="https://www.linkedin.com/in/hayley-knight-a14552159/" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Hayley Knight</a></div>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_HAYLEY_KNIGHT"></span></a></div>
                                 <div><a href="https://www.linkedin.com/in/andrea-stefannia-ar%C3%A9valo-t%C3%A1mara-3a305494"
-                                        target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> Andrea
-                                        Arévalo Támara</a></div>
+                                        target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_ANDREA_AR_VALO_T_MARA">Andrea
+                                            Arévalo Támara</span></a></div>
                                 <div><a href="https://www.linkedin.com/in/goncalofmatos/" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Gonçalo Matos</a></div>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_GON_ALO_MATOS"></span></a></div>
                                 <div><a href="https://www.linkedin.com/in/rosamfelix/" target="_blank" rel="noopener"><i
-                                            class="fa-brands fa-linkedin"></i> Rosa Félix</a></div>
+                                            class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_ROSA_F_LIX"></span></a></div>
                             </div>
                         </div>
                     </div>
@@ -401,21 +456,26 @@
                     <div class="partner-card-inner">
                         <div class="partner-card-front">
                             <div class="partner-logo-wrap"><img src="assets/dtu.png" alt="DTU"></div>
-                            <h4>Danmarks Tekniske Universitet</h4><span class="partner-country">🇩🇰 Denmark</span><span
-                                class="partner-role-tag role-partner">Partner</span>
+                            <h4><span data-i18n="T_DANMARKS_TEKNISKE_UNIVERSITET"></span></h4><span
+                                class="partner-country">🇩🇰 Denmark</span><span
+                                class="partner-role-tag role-partner"><span data-i18n="T_PARTNER"></span></span>
                         </div>
                         <div class="partner-card-back" onclick="event.stopPropagation()">
                             <h4 onclick="this.closest('.partner-card').classList.remove('flipped');"><i
                                     class="fa-solid fa-rotate-left" style="font-size: 0.9em; margin-right: 5px;"></i>
-                                The Team</h4>
+                                <span data-i18n="T_THE_TEAM"></span>
+                            </h4>
                             <div class="team-list">
                                 <div><a href="https://www.linkedin.com/in/victor-andrade-77216a17a/" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Victor Andrade</a><span
-                                        class="team-role">Principal Investigator</span></div>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_VICTOR_ANDRADE"></span></a><span class="team-role"><span
+                                            data-i18n="T_PRINCIPAL_INVESTIGATOR"></span></span></div>
                                 <div><a href="https://www.linkedin.com/in/marcelakanitz/?locale=en" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Marcela Kanitz</a></div>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_MARCELA_KANITZ"></span></a></div>
                                 <div><a href="https://www.linkedin.com/in/gianalorenzini/" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Giana Carli Lorenzini</a>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_GIANA_CARLI_LORENZINI"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -427,19 +487,25 @@
                             <div class="partner-logo-wrap"><img
                                     src="https://www.google.com/s2/favicons?sz=128&domain_url=tudelft.nl"
                                     alt="TU Delft"></div>
-                            <h4>Delft University of Technology</h4><span class="partner-country">🇳🇱
-                                Netherlands</span><span class="partner-role-tag role-partner">Partner</span>
+                            <h4><span data-i18n="T_DELFT_UNIVERSITY_OF_TECHNOLOGY"></span></h4><span
+                                class="partner-country">🇳🇱
+                                Netherlands</span><span class="partner-role-tag role-partner"><span
+                                    data-i18n="T_PARTNER"></span></span>
                         </div>
                         <div class="partner-card-back" onclick="event.stopPropagation()">
                             <h4 onclick="this.closest('.partner-card').classList.remove('flipped');"><i
                                     class="fa-solid fa-rotate-left" style="font-size: 0.9em; margin-right: 5px;"></i>
-                                The Team</h4>
+                                <span data-i18n="T_THE_TEAM"></span>
+                            </h4>
                             <div class="team-list">
                                 <div><a href="https://www.linkedin.com/in/ooviedot/" target="_blank" rel="noopener"><i
-                                            class="fa-brands fa-linkedin"></i> Oscar Oviedo Trespalacios</a><span
-                                        class="team-role">Principal Investigator</span></div>
+                                            class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_OSCAR_OVIEDO_TRESPALACIOS"></span></a><span
+                                        class="team-role"><span data-i18n="T_PRINCIPAL_INVESTIGATOR"></span></span>
+                                </div>
                                 <div><a href="https://www.linkedin.com/in/maryam-jafari93/" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Maryam Jafari</a></div>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_MARYAM_JAFARI"></span></a></div>
                             </div>
                         </div>
                     </div>
@@ -449,17 +515,21 @@
                         <div class="partner-card-front">
                             <div class="partner-logo-wrap"><img
                                     src="https://www.google.com/s2/favicons?sz=128&domain_url=uab.cat" alt="UAB"></div>
-                            <h4>Universitat Autònoma de Barcelona</h4><span class="partner-country">🇪🇸
-                                Spain</span><span class="partner-role-tag role-partner">Partner</span>
+                            <h4><span data-i18n="T_UNIVERSITAT_AUT_NOMA_DE_BARCEL"></span></h4><span
+                                class="partner-country">🇪🇸
+                                Spain</span><span class="partner-role-tag role-partner"><span
+                                    data-i18n="T_PARTNER"></span></span>
                         </div>
                         <div class="partner-card-back" onclick="event.stopPropagation()">
                             <h4 onclick="this.closest('.partner-card').classList.remove('flipped');"><i
                                     class="fa-solid fa-rotate-left" style="font-size: 0.9em; margin-right: 5px;"></i>
-                                The Team</h4>
+                                <span data-i18n="T_THE_TEAM"></span>
+                            </h4>
                             <div class="team-list">
                                 <div><a href="https://www.linkedin.com/in/jaime-orrego/" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Jaime Orrego Oñate</a><span
-                                        class="team-role">Principal Investigator</span></div>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_JAIME_ORREGO_O_ATE"></span></a><span class="team-role"><span
+                                            data-i18n="T_PRINCIPAL_INVESTIGATOR"></span></span></div>
                             </div>
                         </div>
                     </div>
@@ -470,19 +540,23 @@
                             <div class="partner-logo-wrap"><img
                                     src="https://www.google.com/s2/favicons?sz=128&domain_url=oslomet.no" alt="OsloMet">
                             </div>
-                            <h4>Oslo Metropolitan University</h4><span class="partner-country">🇳🇴 Norway</span><span
-                                class="partner-role-tag role-partner">Partner</span>
+                            <h4><span data-i18n="T_OSLO_METROPOLITAN_UNIVERSITY"></span></h4><span
+                                class="partner-country">🇳🇴 Norway</span><span
+                                class="partner-role-tag role-partner"><span data-i18n="T_PARTNER"></span></span>
                         </div>
                         <div class="partner-card-back" onclick="event.stopPropagation()">
                             <h4 onclick="this.closest('.partner-card').classList.remove('flipped');"><i
                                     class="fa-solid fa-rotate-left" style="font-size: 0.9em; margin-right: 5px;"></i>
-                                The Team</h4>
+                                <span data-i18n="T_THE_TEAM"></span>
+                            </h4>
                             <div class="team-list">
                                 <div><a href="https://www.linkedin.com/in/dan-piatkowski-39977b48/" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Daniel Piatkowski</a><span
-                                        class="team-role">Principal Investigator</span></div>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_DANIEL_PIATKOWSKI"></span></a><span class="team-role"><span
+                                            data-i18n="T_PRINCIPAL_INVESTIGATOR"></span></span></div>
                                 <div><a href="https://www.linkedin.com/in/ikosmidis/" target="_blank" rel="noopener"><i
-                                            class="fa-brands fa-linkedin"></i> Ioannis Kosmidis</a></div>
+                                            class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_IOANNIS_KOSMIDIS"></span></a></div>
                             </div>
                         </div>
                     </div>
@@ -491,22 +565,28 @@
                     <div class="partner-card-inner">
                         <div class="partner-card-front">
                             <div class="partner-logo-wrap"><img src="assets/cml.png" alt="CML"></div>
-                            <h4>Câmara Municipal de Lisboa</h4><span class="partner-country">🇵🇹 Portugal</span><span
-                                class="partner-role-tag role-city">Municipality</span>
+                            <h4><span data-i18n="T_C_MARA_MUNICIPAL_DE_LISBOA"></span></h4><span
+                                class="partner-country">🇵🇹 Portugal</span><span
+                                class="partner-role-tag role-city"><span data-i18n="T_MUNICIPALITY"></span></span>
                         </div>
                         <div class="partner-card-back" onclick="event.stopPropagation()">
                             <h4 onclick="this.closest('.partner-card').classList.remove('flipped');"><i
                                     class="fa-solid fa-rotate-left" style="font-size: 0.9em; margin-right: 5px;"></i>
-                                The Team</h4>
+                                <span data-i18n="T_THE_TEAM"></span>
+                            </h4>
                             <div class="team-list">
                                 <div><a href="https://www.linkedin.com/in/in%C3%AAs-castro-henriques/" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Inês Castro
-                                        Henriques</a><span class="team-role">Principal Investigator</span></div>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_IN_S_CASTRO_HENRIQUES">Inês Castro
+                                            Henriques</span></a><span class="team-role"><span
+                                            data-i18n="T_PRINCIPAL_INVESTIGATOR"></span></span></div>
                                 <div><a href="https://www.linkedin.com/in/ana-mar%C3%A7al-329109b6/" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Ana Marçal</a></div>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_ANA_MAR_AL"></span></a></div>
                                 <div><span
                                         style="color:var(--color-navy); font-weight: 500; font-size: 14px; display: flex; align-items: center; gap: 0.5rem; justify-content: center;"><i
-                                            class="fa-solid fa-user" style="color:var(--color-text-muted);"></i> Carla Duarte</span></div>
+                                            class="fa-solid fa-user" style="color:var(--color-text-muted);"></i> <span
+                                            data-i18n="T_CARLA_DUARTE"></span></span></div>
                             </div>
                         </div>
                     </div>
@@ -518,26 +598,32 @@
                                     src="https://www.google.com/s2/favicons?sz=128&domain_url=holbaek.dk"
                                     alt="Holbæk Kommune">
                             </div>
-                            <h4>Holbæk Kommune</h4><span class="partner-country">🇩🇰 Denmark</span><span
-                                class="partner-role-tag role-city">Municipality</span>
+                            <h4><span data-i18n="T_HOLB_K_KOMMUNE"></span></h4><span class="partner-country">🇩🇰
+                                Denmark</span><span class="partner-role-tag role-city"><span
+                                    data-i18n="T_MUNICIPALITY"></span></span>
                         </div>
                         <div class="partner-card-back" onclick="event.stopPropagation()">
                             <h4 onclick="this.closest('.partner-card').classList.remove('flipped');"><i
                                     class="fa-solid fa-rotate-left" style="font-size: 0.9em; margin-right: 5px;"></i>
-                                The Team</h4>
+                                <span data-i18n="T_THE_TEAM"></span>
+                            </h4>
                             <div class="team-list">
                                 <div><a href="https://www.linkedin.com/in/lene-krull-957977b2/" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Lene Krull</a><span
-                                        class="team-role">Principal Investigator</span></div>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_LENE_KRULL"></span></a><span class="team-role"><span
+                                            data-i18n="T_PRINCIPAL_INVESTIGATOR"></span></span></div>
                                 <div><a href="https://www.linkedin.com/in/dorthe-skovr%C3%B8d-christensen-1a39988/"
-                                        target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> Dorthe
-                                        Skovrød Christensen</a></div>
+                                        target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_DORTHE_SKOVR_D_CHRISTENSEN">Dorthe
+                                            Skovrød Christensen</span></a></div>
                                 <div><span
                                         style="color:var(--color-navy); font-weight: 500; font-size: 14px; display: flex; align-items: center; gap: 0.5rem; justify-content: center;"><i
-                                            class="fa-solid fa-user" style="color:var(--color-text-muted);"></i> Sissel
-                                        Mobeck</span></div>
+                                            class="fa-solid fa-user" style="color:var(--color-text-muted);"></i> <span
+                                            data-i18n="T_SISSEL_MOBECK">Sissel
+                                            Mobeck</span></span></div>
                                 <div><a href="https://www.linkedin.com/in/anne-herskind-b1ab90b6/" target="_blank"
-                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> Anne Herskind</a></div>
+                                        rel="noopener"><i class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_ANNE_HERSKIND"></span></a></div>
                             </div>
                         </div>
                     </div>
@@ -546,17 +632,20 @@
                     <div class="partner-card-inner">
                         <div class="partner-card-front">
                             <div class="partner-logo-wrap"><img src="assets/usp.jpg" alt="USP"></div>
-                            <h4>Universidade de São Paulo</h4><span class="partner-country">🇧🇷 Brazil</span><span
-                                class="partner-role-tag role-coop">Cooperation</span>
+                            <h4><span data-i18n="T_UNIVERSIDADE_DE_S_O_PAULO"></span></h4><span
+                                class="partner-country">🇧🇷 Brazil</span><span class="partner-role-tag role-coop"><span
+                                    data-i18n="T_COOPERATION"></span></span>
                         </div>
                         <div class="partner-card-back" onclick="event.stopPropagation()">
                             <h4 onclick="this.closest('.partner-card').classList.remove('flipped');"><i
                                     class="fa-solid fa-rotate-left" style="font-size: 0.9em; margin-right: 5px;"></i>
-                                The Team</h4>
+                                <span data-i18n="T_THE_TEAM"></span>
+                            </h4>
                             <div class="team-list">
                                 <div><a href="https://orcid.org/0000-0002-6602-5708" target="_blank" rel="noopener"><i
-                                            class="fa-brands fa-linkedin"></i> Mateus Humberto Andrade</a><span
-                                        class="team-role">Principal contact</span></div>
+                                            class="fa-brands fa-linkedin"></i> <span
+                                            data-i18n="T_MATEUS_HUMBERTO_ANDRADE"></span></a><span
+                                        class="team-role"><span data-i18n="T_PRINCIPAL_CONTACT"></span></span></div>
                             </div>
                         </div>
                     </div>
@@ -585,14 +674,15 @@
 
         <div class="container cta-content">
             <div class="section-header">
-                <div class="subtitle" style="color: var(--color-orange)">Get Involved</div>
-                <h2>Follow HANGOUT's journey<br>across European cities.</h2>
+                <div class="subtitle" style="color: var(--color-orange)"><span data-i18n="T_GET_INVOLVED"></span></div>
+                <h2><span data-i18n="T_FOLLOW_HANGOUT_S_JOURNEY"></span><br><span
+                        data-i18n="T_ACROSS_EUROPEAN_CITIES"></span></h2>
             </div>
-            <p>The project runs from January 2026 to December 2028. Follow our progress and get in touch with the team.
+            <p><span data-i18n="T_THE_PROJECT_RUNS_FROM_JANUARY"></span>
             </p>
             <div class="cta-buttons">
                 <a href="mailto:hayleyknight@tecnico.ulisboa.pt,jessica.lucena@tecnico.ulisboa.pt,Andrea.Tamara@tecnico.ulisboa.pt,fmoura@tecnico.ulisboa.pt"
-                    class="btn-light">Contact the team</a>
+                    class="btn-light"><span data-i18n="T_CONTACT_THE_TEAM"></span></a>
             </div>
         </div>
     </section>
@@ -605,17 +695,20 @@
                         <img src="12-logo.png" alt="Hangout Logo"
                             style="height: 100px; width: auto; object-fit: contain;">
                     </div>
-                    <p class="footer-note">Unlocking adolescents' urban accessibility and sustainable mobility. DUT
-                        Partnership Call 2024, 15-Minute City Pathway. January 2026 – December 2028.</p>
+                    <p class="footer-note"><span data-i18n="T_UNLOCKING_ADOLESCENTS_URBAN_AC">Unlocking adolescents'
+                            urban accessibility and sustainable mobility. DUT
+                            Partnership Call 2024, 15-Minute City Pathway. January 2026 – December 2028.</span></p>
                 </div>
                 <ul class="footer-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#objectives">Objectives</a></li>
-                    <li><a href="#cities">Cities</a></li>
-                    <li><a href="#consortium">Team</a></li>
+                    <li><a href="#about"><span data-i18n="T_ABOUT"></span></a></li>
+                    <li><a href="#objectives"><span data-i18n="T_OBJECTIVES"></span></a></li>
+                    <li><a href="#cities"><span data-i18n="T_CITIES"></span></a></li>
+                    <li><a href="#consortium"><span data-i18n="T_TEAM"></span></a></li>
                 </ul>
-                <div style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-end; justify-content: center;">
-                    <img src="DUT.jpg" alt="DUT Logo" style="height: 55px; width: auto; object-fit: contain; mix-blend-mode: multiply;">
+                <div
+                    style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-end; justify-content: center;">
+                    <img src="DUT.png" alt="DUT Logo"
+                        style="height: 55px; width: auto; object-fit: contain; mix-blend-mode: multiply;">
                     <img src="EU.png" alt="EU Logo" style="height: 55px; width: auto; object-fit: contain;">
                 </div>
             </div>
@@ -628,66 +721,13 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <script src="script.js"></script>
-    <script src="translations.js"></script>
-    <script type="text/javascript">
-        let currentLang = 'en';
-
-        function switchLanguage(lang) {
-            if (currentLang === lang) return;
-            currentLang = lang;
-
-            // Update active state of buttons
-            document.querySelectorAll('.flag-btn').forEach(btn => {
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-
-            // Translate all text nodes
-            const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-            let node;
-            const nodesToUpdate = [];
-            while(node = walk.nextNode()) {
-                if (node.parentElement && node.parentElement.tagName === 'SCRIPT') continue;
-                if (node.parentElement && node.parentElement.tagName === 'STYLE') continue;
-                
-                const text = node.nodeValue.trim();
-                if (!text || text === '') continue;
-                
-                // Store original English text if not already stored
-                if (!node.originalText) {
-                    node.originalText = node.nodeValue;
-                }
-
-                const originalText = node.originalText;
-                
-                // Match leading whitespace, content, and trailing whitespace
-                const match = originalText.match(/^(\s*)([\s\S]*?)(\s*)$/);
-                if (!match) continue;
-                
-                // Normalize internal whitespace (newlines, tabs) to a single space for dictionary lookup
-                const lookupKey = match[2].replace(/\s+/g, ' ');
-                const lookupKeyFull = originalText.replace(/\s+/g, ' ');
-                if (!lookupKey) continue;
-                
-                // If translation exists, update
-                if (translations[lang] && translations[lang][lookupKey]) {
-                    nodesToUpdate.push({ node, newValue: match[1] + translations[lang][lookupKey] + match[3] });
-                } else if (translations[lang] && translations[lang][lookupKeyFull]) {
-                    nodesToUpdate.push({ node, newValue: translations[lang][lookupKeyFull] });
-                } else if (lang === 'en') {
-                    // Reset to English
-                    nodesToUpdate.push({ node, newValue: originalText });
-                }
-            }
-            
-            nodesToUpdate.forEach(item => {
-                item.node.nodeValue = item.newValue;
-            });
-        }
-    </script>
+    <script src="locales/en.js"></script>
+    <script src="locales/pt.js"></script>
+    <script src="locales/es.js"></script>
+    <script src="locales/nl.js"></script>
+    <script src="locales/da.js"></script>
+    <script src="locales/no.js"></script>
+    <script src="i18n.js"></script>
     <style>
         .flag-btn {
             background: none;
@@ -699,11 +739,13 @@
             transition: all 0.2s ease;
             opacity: 0.7;
         }
+
         .flag-btn:hover {
             background: rgba(0, 0, 0, 0.05);
             transform: scale(1.1);
             opacity: 0.9;
         }
+
         .flag-btn.active {
             background: rgba(0, 206, 209, 0.2);
             border: 2px solid var(--color-teal, #00ced1);
